@@ -5,16 +5,16 @@ import { WORDS } from "../../data";
 import GameInput from "../GameInput";
 import GuessResults from "../GuessResults";
 
-// Pick a random word on every pageload.
-const answer = sample(WORDS);
-// To make debugging easier, we'll log the solution in the console.
-console.info({ answer });
-
 function Game() {
   const [results, setResults] = React.useState([
     { label: "VENOM", id: 123 },
     { label: "SWEET", id: 456 },
   ]);
+
+  // Pick a random word on every pageload.
+  const [answer] = React.useState(sample(WORDS));
+  // To make debugging easier, we'll log the solution in the console.
+  console.info({ answer });
 
   const addGuess = (label) => {
     if (!label) {
@@ -32,7 +32,7 @@ function Game() {
 
   return (
     <>
-      <GuessResults results={results} setResults={setResults} />
+      <GuessResults results={results} setResults={setResults} answer={answer} />
       <GameInput addGuess={addGuess} />
     </>
   );

@@ -4,7 +4,7 @@ import Guess from "../Guess";
 import { NUM_OF_GUESSES_ALLOWED } from "../../constants";
 import { range } from "../../utils";
 
-function GuessResults({ results }) {
+function GuessResults({ results, answer }) {
   const guessesAllowedRange = range(0, NUM_OF_GUESSES_ALLOWED);
   return (
     <div className="guess-results">
@@ -18,7 +18,7 @@ function GuessResults({ results }) {
 
         return (
           <p key={guess.id} id={guess.id} className={"guess"}>
-            <Guess label={guess.label} />
+            <Guess label={guess.label} answer={answer} />
           </p>
         );
       })}
