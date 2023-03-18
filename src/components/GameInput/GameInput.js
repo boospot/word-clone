@@ -20,6 +20,8 @@ function GameInput() {
         id="guess-input"
         type="text"
         value={guessInput}
+        pattern="[a-zA-Z]{5}"
+        title="5 letter word"
         onChange={(event) => {
           const newGuess = event.target.value;
 
