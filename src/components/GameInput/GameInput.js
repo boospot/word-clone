@@ -11,7 +11,6 @@ function GameInput({ addGuess }) {
           window.alert("Word should be 5 characters long");
           return;
         }
-        console.log(guessInput);
         addGuess(guessInput);
         setGuessInput("");
       }}

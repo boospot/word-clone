@@ -11,7 +11,10 @@ const answer = sample(WORDS);
 console.info({ answer });
 
 function Game() {
-  const [results, setResults] = React.useState([]);
+  const [results, setResults] = React.useState([
+    { label: "VENOM", id: 123 },
+    { label: "SWEET", id: 456 },
+  ]);
 
   const addGuess = (label) => {
     if (!label) {
