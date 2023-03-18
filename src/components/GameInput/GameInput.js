@@ -1,6 +1,6 @@
 import React from "react";
 
-function GameInput() {
+function GameInput({ addGuess }) {
   const [guessInput, setGuessInput] = React.useState("");
   return (
     <form
@@ -12,6 +12,7 @@ function GameInput() {
           return;
         }
         console.log(guessInput);
+        addGuess(guessInput);
         setGuessInput("");
       }}
     >
