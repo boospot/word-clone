@@ -17,11 +17,9 @@ function GuessResults({ results }) {
             };
 
         return (
-          results[index] && (
-            <p key={guess.id} id={guess.id} className={"guess"}>
-              <Guess label={guess.label} />
-            </p>
-          )
+          <p key={guess.id} id={guess.id} className={"guess"}>
+            <Guess label={guess.label} />
+          </p>
         );
       })}
     </div>

@@ -8,7 +8,7 @@ function Guess({ label }) {
   return guessRange.map((index) => {
     return (
       <span key={index} className={"cell"}>
-        {label[index]}
+        {label[index] ? label[index] : ""}
       </span>
     );
   });
