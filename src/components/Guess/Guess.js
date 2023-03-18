@@ -7,7 +7,6 @@ function Guess({ label, answer }) {
   // console.log("Guess");
 
   const guessResult = checkGuess(label, answer);
-  console.log(guessResult);
 
   return guessRange.map((index) => {
     const classNameResult = guessResult ? guessResult[index].status : "";

@@ -1,6 +1,6 @@
 import React from "react";
 
-function GameInput({ addGuess }) {
+function GameInput({ addGuess, finalResult }) {
   const [guessInput, setGuessInput] = React.useState("");
   return (
     <form
@@ -22,6 +22,7 @@ function GameInput({ addGuess }) {
         value={guessInput}
         pattern="[a-zA-Z]{5}"
         title="5 letter word"
+        disabled={finalResult}
         onChange={(event) => {
           const newGuess = event.target.value;
 
